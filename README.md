@@ -1,3 +1,3 @@
 # githubactions
 
-. Test the repo for the GITHUB ACTION VIA OIDC provider
+. Test the repo for the GITHUB ACTION VIA OIDC providers
