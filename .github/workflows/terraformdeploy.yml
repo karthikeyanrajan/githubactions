@@ -27,7 +27,7 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3  # Latest version as of now
         with:
-          terraform_version: 1.5.0  # Specify the version of Terraform you want to use
+          terraform_version: 1.9.5  # Specify the version of Terraform you want to use
 
       - name: Terraform Init
         run: terraform init
@@ -35,8 +35,8 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-#      - name: Terraform Apply
-#        run: terraform apply -auto-approve
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
         
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve
+#      - name: Terraform Destroy
+#        run: terraform destroy -auto-approve
