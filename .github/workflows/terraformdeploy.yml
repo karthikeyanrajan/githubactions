@@ -15,17 +15,17 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Latest version as of now
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5  # Latest version as of now
         with:
           role-to-assume: arn:aws:iam::058264181190:role/knactions
           role-session-name: github-actions-session
           aws-region: us-east-1
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3  # Latest version as of now
         with:
           terraform_version: 1.5.0  # Specify the version of Terraform you want to use
 
@@ -39,4 +39,4 @@ jobs:
 #        run: terraform apply -auto-approve
         
       - name: Terraform Destroy
-        run: terraform destroy -auto-approve        
+        run: terraform destroy -auto-approve
