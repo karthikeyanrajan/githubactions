@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::058264181190:oidc-provider/token.actions.githubusercontent.com"  // This ARN ID should be taken from the identity provider
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "token.actions.githubusercontent.com:sub": "repo:karthikeyanrajan/githubactions:ref:refs/heads/main"  // Repo name has been taken from the GitHub repo
+                }
+            }
+        }
+    ]
+}
