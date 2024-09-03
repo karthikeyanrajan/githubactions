@@ -1,8 +1,8 @@
 # githubactions
 
-. Repo for the GITHUB ACTION VIA OIDC providers
+ Repo for the GITHUB ACTION VIA OIDC providers
 
- - Trust policy json file to assign roles on the aws
+- Trust policy json file to assign roles on the aws
 
 * aws trust policy to add two different repo.json
 * aws trust policy to refer all branches.json
